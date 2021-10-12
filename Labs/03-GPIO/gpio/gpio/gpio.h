@@ -72,7 +72,7 @@ void GPIO_write_low(volatile uint8_t *reg_name, uint8_t pin_num);
 
 
 /* GPIO_write_high */
-void GPIO_write_high(volatile uint8_t *reg_name, uint8_t pin_num)
+void GPIO_write_high(volatile uint8_t *reg_name, uint8_t pin_num);
 
 
 /* GPIO_toggle */
