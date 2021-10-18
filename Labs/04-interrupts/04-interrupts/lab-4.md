@@ -9,7 +9,7 @@
 | **Module** | **Number of bits** | **1** | **8** | **32** | **64** | **128** | **256** | **1024** |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Timer/Counter0 | 8  | 16u | 128u | -- | 1m| -- |4m |16m |
-| Timer/Counter1 | 16 |  4m   |   33m   | -- | 262m| -- |1s |42s |
+| Timer/Counter1 | 16 |  4m   |   33m   | -- | 262m| -- |1s |4s |
 | Timer/Counter2 | 8  |  16u   |   128u   |  512u  |1m |  2m  |4m |16m |
 
 
@@ -35,24 +35,24 @@
 #define TIM0_stop()           TCCR0B &= ~((1<<CS02) | (1<<CS01) | (1<<CS00));
 
 
-/** @brief Set overflow 4ms, prescaler 001 --> 1 */
-#define TIM0_overflow_4ms()   TCCR0B &= ~((1<<CS02) | (1<<CS01)); TCCR0B |= (1<<CS00);
+/** @brief Set overflow 16us, prescaler 001 --> 1 */
+#define TIM0_overflow_16us()   TCCR0B &= ~((1<<CS02) | (1<<CS01)); TCCR0B |= (1<<CS00);
 
 
-/** @brief Set overflow 33ms, prescaler 010 --> 8 */
-#define TIM0_overflow_33ms()  TCCR0B &= ~((1<<CS02) | (1<<CS00)); TCCR0B |= (1<<CS01);
+/** @brief Set overflow 128us, prescaler 010 --> 8 */
+#define TIM0_overflow_128us()  TCCR0B &= ~((1<<CS02) | (1<<CS00)); TCCR0B |= (1<<CS01);
 
 
-/** @brief Set overflow 262ms, prescaler 011 --> 64 */
-#define TIM0_overflow_262ms() TCCR0B &= ~(1<<CS02); TCCR0B |= (1<<CS01) | (1<<CS00);
+/** @brief Set overflow 1ms, prescaler 011 --> 64 */
+#define TIM0_overflow_1ms() TCCR0B &= ~(1<<CS02); TCCR0B |= (1<<CS01) | (1<<CS00);
 
 
-/** @brief Set overflow 1s, prescaler 100 --> 256 */
-#define TIM0_overflow_1s()    TCCR0B &= ~((1<<CS01) | (1<<CS00)); TCCR0B |= (1<<CS02);
+/** @brief Set overflow 4ms, prescaler 100 --> 256 */
+#define TIM0_overflow_4ms()    TCCR0B &= ~((1<<CS01) | (1<<CS00)); TCCR0B |= (1<<CS02);
 
 
-/** @brief Set overflow 4s, prescaler // 101 --> 1024 */
-#define TIM0_overflow_4s()    TCCR0B &= ~(1<<CS01); TCCR0B |= (1<<CS02) | (1<<CS00);
+/** @brief Set overflow 16ms, prescaler // 101 --> 1024 */
+#define TIM0_overflow_16ms()    TCCR0B &= ~(1<<CS01); TCCR0B |= (1<<CS02) | (1<<CS00);
 
 
 /** @brief Enable overflow interrupt, 1 --> enable */
