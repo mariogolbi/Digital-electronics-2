@@ -63,7 +63,7 @@ ISR(TIMER0_OVF_vect)
 
 3. Flowchart figure for function `SEG_clk_2us()` which generates one clock period on `SEG_CLK` pin with a duration of 2&nbsp;us. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![https://github.com/mariogolbi/Digital-electronics-2/blob/main/Labs/images/Flowchart_lab5.png]()
+   !Flowchart lab5](https://github.com/mariogolbi/Digital-electronics-2/blob/main/Labs/images/Flowchart_lab5.png)
 
 
 ### Kitchen alarm
@@ -72,4 +72,4 @@ Consider a kitchen alarm with a 7-segment display, one LED and three push button
 
 1. Scheme of kitchen alarm; do not forget the supply voltage. The image can be drawn on a computer or by hand. Always name all components and their values.
 
-   ![https://github.com/mariogolbi/Digital-electronics-2/blob/main/Labs/images/kitchen_timer.png]()
+   ![kitchen timer](https://github.com/mariogolbi/Digital-electronics-2/blob/main/Labs/images/kitchen_timer.png)
