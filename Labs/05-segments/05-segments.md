@@ -1,4 +1,4 @@
-# Lab 5: YOUR_FIRSTNAME FAMILYNAME
+# Lab 5: MARIO GOLBANO CORZO
 
 [Link to my `Digital-electronics-2` GitHub repository](https://github.com/mariogolbi/Digital-electronics-2)
 
