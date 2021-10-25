@@ -31,18 +31,19 @@ int main(void)
 
     // Test of SSD: display number '3' at position 0
     SEG_update_shift_regs(7, 2);
+	
+	// Configure 16-bit Timer/Counter1 for Decimal counter
+    // Set the overflow prescaler to 262 ms and enable interrupt
     TIM1_overflow_262ms();
     TIM1_overflow_interrupt_enable();
-    
+	
+    // Enables interrupts by setting the global interrupt mask    
     sei();
     
-    // Configure 16-bit Timer/Counter1 for Decimal counter
-    // Set the overflow prescaler to 262 ms and enable interrupt
-
-
-    // Enables interrupts by setting the global interrupt mask
-
-
+    TIM1_overflow_4ms();
+    TIM1_overflow_interrupt_enable();
+	
+	sei();
     // Infinite loop
     while (1)
     {
@@ -62,16 +63,33 @@ int main(void)
 ISR(TIMER1_OVF_vect)
 {
     // WRITE YOUR CODE HERE
-    static uint8_t val = 0;  // This line will only run the first time
-    
-    val++;
-    if (val > 9)
-        val = 0;
-        
-    SEG_update_shift_regs(val, 2);
-
+    static uint8_t val0 = 0;  // This line will only run the first time
+    static uint8_t val1 = 0;
+	
+    val0++;
+    if (val0 > 9){
+        val0 = 0;
+		val1++;
+		
+		if(val1>5){
+			val1=0;
+		}
+	}
 }
 
+ISR(TIMER0_OVF_vect)
+{
+	static uint8_t pos = 0;
+	
+	pos++;
+	if (pos>1){
+		pos=0;
+		SEG_update_shift_regs(val0,pos);
+	}
+	else{
+		SEG_update_shift_regs(val1,pos);
+	}
+}
 // IMPROTANTE PATRA EL SIGUIENTE DIA
 // we need to add another timer TIMER0 as the one above and when it overflows we add another variuable pos
 //that we are changing from 0 to 1 according to the other timer whenever we need to change the position
