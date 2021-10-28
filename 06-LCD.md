@@ -10,14 +10,14 @@
 
 2. (Hand-drawn) picture of time signals between ATmega328P and LCD keypad shield (HD44780 driver) when transmitting three character data `De2`.
 
-   ![your figure]()
+   ![signal of characters de2](https://github.com/mariogolbi/Digital-electronics-2/blob/main/Labs/images/De2_signal.jpg)
 
 
 ### Stopwatch
 
 1. Flowchart figure for `TIMER2_OVF_vect` interrupt service routine which overflows every 16&nbsp;ms but it updates the stopwatch LCD approximately every 100&nbsp;ms (6 x 16&nbsp;ms = 100&nbsp;ms). Display tenths of a second and seconds `00:seconds.tenths`. Let the stopwatch counts from `00:00.0` to `00:59.9` and then starts again. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![your figure]()
+   ![Flowchart TImer2_OVF_vect](https://github.com/mariogolbi/Digital-electronics-2/blob/main/Labs/images/Flowchart%20Lab06.png)
 
 
 ### Custom characters
@@ -36,14 +36,14 @@ uint8_t customChar[16] =
     0b00100,
     0b00100,
     0b00000,
-	  0b00000,
-  	0b01110,
-	  0b00000,
-  	0b01110,
-  	0b00100,
-	  0b00100,
-	  0b00100,
-	  0b00000
+    0b00000,
+    0b01110,
+    0b00000,
+    0b01110,
+    0b00100,
+    0b00100,
+    0b00100,
+    0b00000
 };
 
 ```
@@ -55,4 +55,4 @@ Consider a kitchen alarm with an LCD, one LED and three push buttons: start, +1 
 
 1. Scheme of kitchen alarm; do not forget the supply voltage. The image can be drawn on a computer or by hand. Always name all components and their values.
 
-   ![your figure]()
+   ![Kitchen alarm LCD](https://github.com/mariogolbi/Digital-electronics-2/blob/main/Labs/images/kitchen_LCD.png)
