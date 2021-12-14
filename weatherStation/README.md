@@ -31,11 +31,11 @@ The aim of this project is to design a solar-tracking weather station. This way,
 
 ## Hardware description
 We used the following components:
-1. Arduino Uno + breadboard: 8-bit microcrontroller based on AVR.
-2. Sensors:
+**1. Arduino Uno**: 8-bit microcrontroller based on AVR.
+**2. Sensors:**
  * DHT12 humidity and temperature sensor
  * Light intensity sensor: As we did not have one in the Lab, we designed a voltage divisor with a _photoresistor_ with another _resistor of 1 KOhm_, so that the voltage at the output would change according to the light intensity.
-3. Others:
+**3. Others:**
  * [LCD keypad shield](#objectives)
  * 2 x [SG-90 micro servo](#objectives): It can only turn 90° in either direction for a total of 180° movement, depending on the signal that reaches it.
 
