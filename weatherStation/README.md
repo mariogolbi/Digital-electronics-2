@@ -1,4 +1,4 @@
-# WEATHER STATION WITH 2-AXIS SOLAR TRACKING SYSTEM
+# SOLAR TRACKING WEATHER STATION
 
 ### Team members
 
@@ -7,9 +7,7 @@
 * Member 3: Gonzalo Docal Saiz
 * Member 4: Mario Golbano Corzo
 
-Link to this file in your GitHub repository:
-
-https://github.com/Arjanit21/Digital-electronics-2/tree/main/Project/weatherStation...)
+[Link to this file in your GitHub repository](https://github.com/mariogolbi/Digital-electronics-2/tree/main/weatherStation)
 
 ### Table of contents
 
@@ -25,59 +23,53 @@ https://github.com/Arjanit21/Digital-electronics-2/tree/main/Project/weatherStat
 <a name="objectives"></a>
 
 ## Project objectives
+The aim of this project is to design a solar-tracking weather station. This way, the temperature, humidity and light intensity will be measured and shown in the display device. Also the weather station has 2 motors (axis X and Y) in order to move the station according to the light. This way the station can move in order to get as much light as possible. This can be very useful for solar panels, looking for the maximum light intensity. For this last purpose, our code is very easy to change according to the light needs of the implementing system. 
 
-Our project is weather station with 2-axis solar tracking system, we had to show the information about the temperature, humidity and light intensity in an LCD keypad shield.
-To show the temperature, humidity, we used DHT12 humidity and temperature sensor to measure thos magnitudes, which we connected in the Arduino and we read the data directly in the LCD keypad shield.
-To show the light intensity we used a photo resistor, connected it to the Arduino and read the data directly in the LCD keypad shield. The values ​​were from 0 to 1000, and by changing the values ​in the photoresistor, we let both motros move.
-The motors were connected directly in Arduino and they were SG-90 micro servo. A servo motor can usually only turn 90° in either direction for a total of 180° movement  One made horizontal movement, and always moved when the values ​​between 0 to 300 or 300 to 600 or 600 to 1000 in three different directions.
-The second motor moved vertically. When the light intensity was less than 500 it has moved down and when it was more than 500 the value of light intensity has moved up. By moving the motors, it was possible to move the panel and to orientate towards more light.
-
-![WhatsApp Image 2021-12-08 at 15 50 50](https://user-images.githubusercontent.com/91128841/145907199-c83b277a-3898-4224-a4f9-dac4cf089ded.jpeg)
-
+![Circuit in the Lab](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/images/arduino.jpeg)
 
 <a name="hardware"></a>
 
 ## Hardware description
 We used the following components:
-* [Arduino Uno + breadboard](#objectives)
-* [LCD keypad shield](#objectives)
-* [photoresistor](#objectives)
-* [SG-90 micro servo](#objectives)
-* [DHT12 humidity and temperature sensor](#objectives)
-* [1kOhm resistor](#objectives)
 
+**1. ATMEGA328P** :  8-bit microcrontroller based on AVR.
+
+**2. Sensors:**
+ * DHT12 humidity and temperature sensor
+ * Light intensity sensor: As we did not have one in the Lab, we designed a voltage divisor with a _photoresistor_ with another _resistor of 1 KOhm_, so that the voltage at the output would change according to the light intensity.
+
+**3. Others:**
+ * [LCD keypad shield](#objectives)
+ * 2 x [SG-90 micro servo](#objectives): It can only turn 90° in either direction for a total of 180° movement, depending on the signal that reaches it.
 
 
 <a name="libs"></a>
 ## Libraries description
 These are the different libraries we used, all of them from the Course Labs:
-* [weatherStation.cproj](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/weatherStation.cproj)
-*  [weatherStation.componentinfo.xml](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/weatherStation.componentinfo.xml)
-* [uart.h](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/uart.h)
-* [uart.c](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/uart.c)
-* [twi.h](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/twi.h)
-* [twi.c](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/twi.c)
-* [timer.h](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/timer.h)
-* [main.c](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/main.c)
-* [lcd_definitons.h](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/lcd_definitions.h)
-* [lcd.h](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/lcd.h)
-* [lcd.c](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/lcd.c)
-* [gpio.h](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/gpio.h)
-* [gpio.c](https://github.com/Arjanit21/Digital-electronics-2/blob/main/Project/weatherStation/weatherStation/weatherStation/gpio.c)
+* [uart.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/uart.h): For UART communications
+* [twi.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/twi.h): For I2C communications
+* [timer.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/timer.h): To define the timer/counters
+* [lcd_definitons.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/lcd_definitions.h): Definitions used in lcd.h
+* [lcd.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/lcd.h): To control the LCD module
+* [gpio.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/gpio.h): AVR GPIO connections library
 
 <a name="circ"></a>
  ## Video/Animation
 Here we can see the animation of the project. It shows how the project should work, moving the axis motors accoirding to he light intensity, as we can see through the LCD. This LCD also shows the temperature and humidity.
 
-![ezgif-6-83386f36faec](https://user-images.githubusercontent.com/91128841/146003177-af843eda-d794-4752-a4a5-aac580b80def.gif)
+![Animated simulation](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/images/animation.gif)
 
+We see how the X axis is turned to the left for values of light intensity less than 300, oriented straigth forward for values from 300 to 600 and turned to the left for a light intensity higher than 600. As for the Y axis, it just does 2 movements: up (when light intensity is less than 500) and down (when this value is higher than 500). The second motos (Y-axis) is should be positioned vertically, not as it is shown in the animation.
+The simulation main file is also coded for showing in UART the values captured, although we could not show it in the animation.
  
- 
+[Here](https://github.com/mariogolbi/Digital-electronics-2/tree/main/weatherStation/weatherStation_simu) is the link to the folder with the simulation diagram document (in Simulide), as well as all the files of the code and the simulation file (.HEX)
+
 <a name="flowchart"></a>
+
  ## Flowchart
  Flowchart of main function:
  
- ![Flowchart Main + FMS](https://user-images.githubusercontent.com/91128841/145999916-b52b00a9-62be-406b-8112-80eaec97f4b3.jpeg)
+ ![Flowchart Main](https://user-images.githubusercontent.com/91128841/145999916-b52b00a9-62be-406b-8112-80eaec97f4b3.jpeg)
 
 Flowchart of ISR-Timer/Counter1
 
@@ -87,8 +79,6 @@ Flowchart of ISR-Timer/Counter1
  ![ISR (ADC_vect)](https://user-images.githubusercontent.com/91128841/145999863-2d8f4215-1411-48d1-a17e-2fc0a0b1bd03.jpeg)
  
 
-
-
 <a name="main"></a>
 ## Main application
 Here is the link to the main.c document we used fot the project.
@@ -97,9 +87,8 @@ Here is the link to the main.c document we used fot the project.
 <a name="video"></a>
 
 ## Video
-Here is a little video-explication of how the actual circuit worked in the Lab with our code.
-
-https://www.youtube.com/watch?v=dNLS92pq2vg&ab_channel=arjanitismajli
+Here is a little video-explication of how the actual circuit worked in the Lab with our code:
+[Video-explication](https://www.youtube.com/watch?v=dNLS92pq2vg&ab_channel=arjanitismajli)
 
 
 <a name="references"></a>
