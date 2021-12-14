@@ -1,4 +1,4 @@
-# WEATHER STATION WITH 2-AXIS SOLAR TRACKING SYSTEM
+# SOLAR TRACKING WEATHER STATION
 
 ### Team members
 
@@ -23,7 +23,7 @@
 <a name="objectives"></a>
 
 ## Project objectives
-The aim of this project is to design a solar-tracking weather station. This way, the temperature, humidity and light intensity will be measured and shown in the display device. Also the weather station has 2 motors (axis X and Y) in order to move the station according to the light. This way the station can move in order to get as much light as possible. This can be very useful for some 
+The aim of this project is to design a solar-tracking weather station. This way, the temperature, humidity and light intensity will be measured and shown in the display device. Also the weather station has 2 motors (axis X and Y) in order to move the station according to the light. This way the station can move in order to get as much light as possible. This can be very useful for solar panels, looking for the maximum light intensity. For this last purpose, our cade is very easy to change according to he light needs of the implementing system. 
 
 ![Circuit in the Lab](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/images/arduino.jpeg)
 
