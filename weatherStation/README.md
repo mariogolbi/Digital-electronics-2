@@ -58,6 +58,7 @@ Here we can see the animation of the project. It shows how the project should wo
 ![Animated simulation](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/images/animation.gif)
 
 We see how the X axis is turned to the left for values of light intensity less than 300, oriented straigth forward for values from 300 to 600 and turned to the left for a light intensity higher than 600. As for the Y axis, it just does 2 movements: up (when light intensity is less than 500) and down (when this value is higher than 500). The second motos (Y-axis) is should be positioned vertically, not as it is shown in the animation.
+The simulation main file is also coded for showing in UART the values captured, although we could not show it in the animation.
  
 [Here](https://github.com/mariogolbi/Digital-electronics-2/tree/main/weatherStation/weatherStation_simu) is the link to the folder with the simulation diagram document (in Simulide), as well as all the files of the code and the simulation file (.HEX)
 
