@@ -59,7 +59,7 @@ Here we can see the animation of the project. It shows how the project should wo
 
 We see how the X axis is turned to the left for values of light intensity less than 300, oriented straigth forward for values from 300 to 600 and turned to the left for a light intensity higher than 600. As for the Y axis, it just does 2 movements: up (when light intensity is less than 500) and down (when this value is higher than 500). The second motos (Y-axis) is should be positioned vertically, not as it is shown in the animation.
  
-[Here] (https://github.com/mariogolbi/Digital-electronics-2/tree/main/weatherStation/weatherStation_simu) is the link to the folder with the simulation diagram document (in Simulide), as well as all the files of the code and the simulation file (.HEX)
+[Here](https://github.com/mariogolbi/Digital-electronics-2/tree/main/weatherStation/weatherStation_simu) is the link to the folder with the simulation diagram document (in Simulide), as well as all the files of the code and the simulation file (.HEX)
 
 <a name="flowchart"></a>
 
@@ -84,8 +84,8 @@ Here is the link to the main.c document we used fot the project.
 <a name="video"></a>
 
 ## Video
-Here is a little video-explication of how the actual circuit worked in the Lab with our code.
-https://www.youtube.com/watch?v=dNLS92pq2vg&ab_channel=arjanitismajli
+Here is a little video-explication of how the actual circuit worked in the Lab with our code:
+[Video-explication](https://www.youtube.com/watch?v=dNLS92pq2vg&ab_channel=arjanitismajli)
 
 
 <a name="references"></a>
