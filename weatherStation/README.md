@@ -69,7 +69,7 @@ The simulation main file is also coded for showing in UART the values captured, 
  ## Flowchart
  Flowchart of functions:
  
- [Flowcharts](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/images/flowcharts.jpeg)
+ ![Flowcharts](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/images/flowcharts.jpeg)
  
 
 <a name="main"></a>
