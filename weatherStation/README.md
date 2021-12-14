@@ -83,6 +83,9 @@ Here is the link to the main.c document we used fot the project.
 Here is a little video-explication of how the actual circuit worked in the Lab with our code:
 [Video-explication](https://www.youtube.com/watch?v=dNLS92pq2vg&ab_channel=arjanitismajli)
 
+Here is the video presentation of the whole project:
+[video presentation](https://youtu.be/-Tz6WetTZAY)
+
 
 <a name="references"></a>
 
