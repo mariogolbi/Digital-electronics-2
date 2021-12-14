@@ -53,7 +53,6 @@ int main(void)
     // Put strings to ringbuffer for transmitting via UART
     uart_puts("\r\nScan I2C-bus for devices:\r\n");
     // Initialize UART to asynchronous, 8N1, 9600
-    uart_init(UART_BAUD_SELECT(9600,F_CPU));
     
 //-------------------------------------------
     // Configure ADC to convert PC0[A0] analog value
