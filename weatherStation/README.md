@@ -23,7 +23,7 @@
 <a name="objectives"></a>
 
 ## Project objectives
-The aim of this project is to design a solar-tracking weather station. This way, the temperature, humidity and light intensity will be measured and shown in the display device. Also the weather station has 2 motors (axis X and Y) in order to move the station according to the light. This way the station can move in order to get as much light as possible. This can be very useful for solar panels, looking for the maximum light intensity. For this last purpose, our cade is very easy to change according to he light needs of the implementing system. 
+The aim of this project is to design a solar-tracking weather station. This way, the temperature, humidity and light intensity will be measured and shown in the display device. Also the weather station has 2 motors (axis X and Y) in order to move the station according to the light. This way the station can move in order to get as much light as possible. This can be very useful for solar panels, looking for the maximum light intensity. For this last purpose, our code is very easy to change according to the light needs of the implementing system. 
 
 ![Circuit in the Lab](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/images/arduino.jpeg)
 
@@ -31,6 +31,7 @@ The aim of this project is to design a solar-tracking weather station. This way,
 
 ## Hardware description
 We used the following components:
+
 **1. ATMEGA328P** :  8-bit microcrontroller based on AVR.
 
 **2. Sensors:**
@@ -45,12 +46,12 @@ We used the following components:
 <a name="libs"></a>
 ## Libraries description
 These are the different libraries we used, all of them from the Course Labs:
-* [uart.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/uart.h)
-* [twi.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/twi.h)
-* [timer.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/timer.h)
-* [lcd_definitons.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/lcd_definitions.h)
-* [lcd.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/lcd.h)
-* [gpio.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/gpio.h)
+* [uart.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/uart.h): For UART communications
+* [twi.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/twi.h): For I2C communications
+* [timer.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/timer.h): To define the timer/counters
+* [lcd_definitons.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/lcd_definitions.h): Definitions used in lcd.h
+* [lcd.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/lcd.h): To control the LCD module
+* [gpio.h](https://github.com/mariogolbi/Digital-electronics-2/blob/main/weatherStation/weatherStation/weatherStation/gpio.h): AVR GPIO connections library
 
 <a name="circ"></a>
  ## Video/Animation
